@@ -1,0 +1,44 @@
+baseURL = 'https://hugo-nano.vercel.app/'
+locale = 'en-us'
+title = 'Hugo Nano'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  name = 'Hugo Nano'
+  email = 'markhorn.dev@gmail.com'
+  numPostsOnHomepage = 3
+  numWorksOnHomepage = 2
+  numProjectsOnHomepage = 3
+
+  [params.home]
+    title = 'Home'
+    description = 'Hugo Nano is a minimal and lightweight blog and portfolio.'
+
+  [params.blog]
+    title = 'Blog'
+    description = 'A collection of articles on topics I am passionate about.'
+
+  [params.work]
+    title = 'Work'
+    description = 'Where I have worked and what I have done.'
+
+  [params.projects]
+    title = 'Projects'
+    description = 'A collection of my projects, with links to repositories and demos.'
+
+  [[params.socials]]
+    name = 'twitter-x'
+    href = 'https://twitter.com/markhorn_dev'
+
+  [[params.socials]]
+    name = 'github'
+    href = 'https://github.com/markhorn-dev'
+
+  [[params.socials]]
+    name = 'linkedin'
+    href = 'https://www.linkedin.com/in/markhorn-dev'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
