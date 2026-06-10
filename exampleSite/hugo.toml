@@ -3,6 +3,9 @@ locale = 'en-us'
 title = 'Hugo Nano'
 disableKinds = ['taxonomy', 'term']
 
+theme = 'hugo-nano'
+themesDir = '../..'
+
 [params]
   name = 'Hugo Nano'
   email = 'markhorn.dev@gmail.com'

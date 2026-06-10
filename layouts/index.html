@@ -1,33 +1,12 @@
 {{ define "main" }}
 <div class="container">
   <h1 class="animate font-semibold text-black-white">
-    Hi, I'm Nano <span class="text-xl">👋🏻</span> 
+    {{ .Title }} <span class="text-xl">👋🏻</span> 
   </h1>
   <div class="page-sections">
     <section>
-      <article class="section-intro">
-        <p class="animate">
-          I am a minimal, seo friendly, accessible portfolio and blog for developers. 
-          I am an even more lightweight version of my popular theme
-          <a href="https://github.com/markhorn-dev/astro-sphere" aria-label="Astro Sphere on Github" class="underline-link" target="_blank">
-            Astro Sphere
-          </a>.
-          I have a lighthouse scores of 100 across the board for performance, 
-          accessibility, best practices and SEO.
-        </p>
-        <p class="animate">
-          I come packed with full type safety, a sitemap, an rss feed, markdown 
-          and mdx support (use components in your markdown) through astro integrations.
-          I am styled with tailwind and come preconfigured with light, dark and 
-          system/os theme preferences out of the box.
-        </p>
-        <p class="animate">
-          Visit
-          <a href="https://github.com/markhorn-dev/astro-nano" aria-label="Astro Nano on Github" class="underline-link" target="_blank">
-            Astro Nano on Github
-          </a>
-          to fork the repository, read the docs or one-click deploy on Vercel or Netlify. 
-        </p>
+      <article class="section-intro homepage-content">
+        {{ .Content }}
       </article>
     </section>
 

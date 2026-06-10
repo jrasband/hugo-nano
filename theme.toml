@@ -1,0 +1,20 @@
+name = "Hugo Nano"
+description = "A minimal, clean, and lightweight portfolio and blog theme built with plain CSS and HTML."
+homepage = "https://github.com/jrasband/hugo-nano"
+license = "MIT"
+licenselink = "https://github.com/jrasband/hugo-nano/blob/main/LICENSE"
+tags = ["minimal", "blog", "portfolio", "clean", "lightweight", "responsive", "animations", "light-dark-theme"]
+features = [
+  "Minimalist design with focus on readability",
+  "Light, dark, and system theme preferences",
+  "Smooth transition animations on scroll",
+  "No Tailwind or heavy JS frameworks — built with native HTML and plain CSS",
+  "Minified and fingerprinted assets (CSS & JS) via Hugo Pipes",
+  "Auto-generated sitemap and RSS feeds",
+  "No external dependencies"
+]
+min_version = "0.120.0"
+
+[author]
+  name = "Joshua Rasband"
+  homepage = "https://github.com/jrasband"

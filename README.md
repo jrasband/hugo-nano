@@ -1,64 +1,71 @@
-![Astro Nano](_astro_nano.png)
+# Hugo Nano
 
-Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog theme.
-
-Built with Astro, Tailwind and Typescript, an no frameworks.
-
-It was designed as an even more minimal theme than my popular theme [Astro Sphere](https://github.com/markhorn-dev/astro-sphere)
-
-## 🚀 Deploy your own
-
-[![Deploy with Vercel](_deploy_vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-nano)  [![Deploy with Netlify](_deploy_netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-nano)
+Hugo Nano is a static, minimalist, lightweight, and lightning-fast portfolio and blog theme. It is migrated from the popular Astro Nano template, designed to have zero dependencies, zero heavy JS frameworks, and a completely clean and readable codebase.
 
 ## 📋 Features
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
+- **Minimalist Design**: Clean typography and layouts focused on readability.
+- **Responsive Layout**: Works beautifully on mobile, tablet, and desktop screens.
+- **Accessibility & SEO**: Built with semantic HTML, single-h1 hierarchy, and fully responsive layouts.
+- **Light/Dark/System Theme**: Instant theme toggles with CSS Custom Properties.
+- **Polished Animations**: Smooth scroll-based fade-in effects and micro-animations on cards and buttons.
+- **No Heavy Frameworks**: No Tailwind or node modules — styled with modular plain CSS.
+- **Performance Optimized**: Assets (CSS and JS) are minified and fingerprinted automatically using Hugo Pipes.
+- **RSS & Sitemap**: Natively auto-generated feeds out of the box.
 
-## 💯 Lighthouse score
-![Astro Nano Lighthouse Score](_lighthouse.png)
+---
 
-## 🕊️ Lightweight
-No frameworks or added bulk
+## 🚀 Getting Started
 
-## ⚡︎ Fast
-Rendered in ~40ms on localhost
+### Installation
 
-## 📄 Configuration
+To use this theme in your Hugo site, you can add it as a git submodule:
 
-The blog posts on the demo serve as the documentation and configuration.
+```bash
+# From the root of your Hugo site directory:
+git submodule add https://github.com/jrasband/hugo-nano.git themes/hugo-nano
+```
 
-## 💻 Commands
+Or, if you use Hugo Modules, add it to your `hugo.toml`:
 
-All commands are run from the root of the project, from a terminal:
+```toml
+[module]
+  [[module.imports]]
+    path = "github.com/jrasband/hugo-nano"
+```
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+### Configuration
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run dev:network`     | Starts local dev server on local network         |
-| `npm run sync`            | Generates TypeScript types for all Astro modules.|
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run preview:network` | Preview build on local network                   |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run lint`            | Run ESLint                                       |
-| `npm run lint:fix`        | Auto-fix ESLint issues                           |
+Add the theme name to your site's configuration file:
+
+```toml
+theme = "hugo-nano"
+```
+
+You can view [exampleSite/hugo.toml](exampleSite/hugo.toml) for a complete example of configuration parameters including socials, navigation counts, and home settings.
+
+---
+
+## 💻 Local Development
+
+To run the example site locally:
+
+1. Navigate to the `exampleSite` folder:
+   ```bash
+   cd exampleSite
+   ```
+2. Start the Hugo server:
+   ```bash
+   hugo server
+   ```
+
+To build a static version of the example site:
+```bash
+hugo -s exampleSite
+```
+
+---
 
 ## 🏛️ License
 
-MIT
+MIT License.
