@@ -68,6 +68,8 @@ html {
   -webkit-tap-highlight-color: transparent;
   overflow-y: scroll;
   color-scheme: light;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
 }
 
 html.dark {
@@ -266,6 +268,19 @@ ul, ol {
   display: flex;
   gap: 0.25rem;
   align-items: center;
+}
+
+.site-nav a {
+  color: var(--color-text-body);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--color-underline);
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: var(--color-heading);
+  text-decoration-color: var(--color-underline-hover);
 }
 
 .site-nav .separator {
@@ -656,9 +671,10 @@ article p code::after {
   content: "`";
 }
 
-article pre {
-  color: var(--prose-pre-code);
-  background-color: var(--prose-pre-bg);
+article pre,
+.highlight pre {
+  color: var(--prose-pre-code) !important;
+  background-color: var(--prose-pre-bg) !important;
   overflow-x: auto;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-weight: 400;
@@ -693,4 +709,37 @@ article img {
   height: auto;
   margin: 2em auto;
   border-radius: 0.375rem;
+}
+
+/* Article Table Styles */
+article table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.85em;
+  line-height: 1.5;
+  text-align: left;
+}
+
+article thead {
+  border-bottom: 2px solid var(--color-border);
+}
+
+article th {
+  font-weight: 600;
+  color: var(--prose-headings);
+  padding: 0.75rem 1rem;
+  vertical-align: bottom;
+}
+
+article td {
+  padding: 0.75rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+article tbody tr:last-child td {
+  border-bottom: none;
 }

@@ -7,7 +7,7 @@ disableKinds = ['taxonomy', 'term']
   name = 'Hugo Nano'
   email = 'markhorn.dev@gmail.com'
   numPostsOnHomepage = 3
-  numWorksOnHomepage = 2
+  numWorksOnHomepage = 1
   numProjectsOnHomepage = 3
 
   [params.home]

@@ -61,7 +61,7 @@
         </a>
       </div>
       <ul class="work-list">
-        {{ $work := where .Site.RegularPages "Section" "work" }}
+        {{ $work := (site.GetPage "section" "work").RegularPages }}
         {{/* Sort work items by dateStart in descending order */}}
         {{ $sorted_work := sort $work "Params.dateStart" "desc" | first .Site.Params.numWorksOnHomepage }}
         {{ range $sorted_work }}
