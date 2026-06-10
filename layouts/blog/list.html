@@ -1,18 +1,18 @@
 {{ define "main" }}
-<div class="mx-auto max-w-screen-sm px-5">
-  <div class="space-y-10">
-    <div class="animate font-semibold text-black dark:text-white">
+<div class="container">
+  <div class="page-sections">
+    <h1 class="animate font-semibold text-black-white">
       Blog
-    </div>
-    <div class="space-y-4">
+    </h1>
+    <div class="post-list">
       {{ $posts := (where .Pages "Params.draft" "!=" true).ByDate.Reverse }}
       {{ range $posts.GroupByDate "2006" }}
-        <section class="animate space-y-4">
-          <div class="font-semibold text-black dark:text-white">
+        <section class="animate section-intro">
+          <h2 class="font-semibold text-black-white">
             {{ .Key }}
-          </div>
+          </h2>
           <div>
-            <ul class="flex flex-col gap-4">
+            <ul class="post-list">
               {{ range .Pages }}
                 <li>
                   {{ partial "arrowcard.html" . }}

@@ -1,19 +1,17 @@
-<footer class="animate">
-  <div class="mx-auto max-w-screen-sm px-5">
-    <div class="relative">
-      <div class="absolute right-0 -top-20">
-        {{ partial "backtotop.html" . }}
-      </div>
+<footer class="site-footer animate">
+  <div class="container site-footer-wrapper">
+    <div class="footer-back-to-top">
+      {{ partial "backtotop.html" . }}
     </div>
-    <div class="flex justify-between items-center">
+    <div class="footer-bottom">
       <div>
         &copy; {{ now.Format "2006" }} | {{ .Site.Params.name }}
       </div>
-      <div class="flex flex-wrap gap-1 items-center">
+      <div class="theme-toggles">
         <button
           id="light-theme-button"
           aria-label="Light theme"
-          class="group size-8 flex items-center justify-center rounded-full"
+          class="theme-toggle-btn"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +23,6 @@
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
           >
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -41,7 +38,7 @@
         <button
           id="dark-theme-button"
           aria-label="Dark theme"
-          class="group size-8 flex items-center justify-center rounded-full"
+          class="theme-toggle-btn"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +50,6 @@
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
@@ -61,7 +57,7 @@
         <button
           id="system-theme-button"
           aria-label="System theme"
-          class="group size-8 flex items-center justify-center rounded-full"
+          class="theme-toggle-btn"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +69,6 @@
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
           >
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="8" y1="21" x2="16" y2="21"></line>
