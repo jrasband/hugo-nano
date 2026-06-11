@@ -41,6 +41,22 @@ themesDir = '../..'
     name = 'linkedin'
     href = 'https://www.linkedin.com/in/markhorn-dev'
 
+[menu]
+  [[menu.main]]
+    name = 'blog'
+    url = '/blog/'
+    weight = 1
+
+  [[menu.main]]
+    name = 'work'
+    url = '/work/'
+    weight = 2
+
+  [[menu.main]]
+    name = 'projects'
+    url = '/projects/'
+    weight = 3
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

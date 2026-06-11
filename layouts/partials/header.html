@@ -4,17 +4,14 @@
       {{ .Site.Params.name }}
     </a>
     <nav class="site-nav">
-      <a href="/blog/">
-        blog
-      </a>
-      <span class="separator">/</span>
-      <a href="/work/">
-        work
-      </a>
-      <span class="separator">/</span>
-      <a href="/projects/">
-        projects
-      </a>
+      {{ range $index, $item := .Site.Menus.main }}
+        {{ if gt $index 0 }}
+          <span class="separator">/</span>
+        {{ end }}
+        <a href="{{ $item.URL | relLangURL }}" {{ if strings.HasPrefix $item.URL "http" }}target="_blank" rel="noopener"{{ end }}>
+          {{ $item.Name }}
+        </a>
+      {{ end }}
     </nav>
   </div>
 </header>

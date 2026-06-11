@@ -52,9 +52,3 @@ To build a static version of the example site:
 ```bash
 hugo -s exampleSite
 ```
-
----
-
-## 🏛️ License
-
-MIT License.

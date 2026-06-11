@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container">
+  <div class="animate">
+    {{ partial "backtoprev.html" (dict "href" "/" "text" "Back to home") }}
+  </div>
+  <div class="post-header">
+    <h1 class="animate text-2xl font-semibold text-black-white">
+      {{ .Title }}
+    </h1>
+  </div>
+  <article class="animate">
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}
