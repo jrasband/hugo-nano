@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="container">
   <h1 class="animate font-semibold text-black-white">
-    {{ .Title }} <span class="text-xl">👋🏻</span> 
+    {{ .Title }} <span class="text-xl"></span> 
   </h1>
   <div class="page-sections">
     <section>
@@ -94,14 +94,8 @@
 
     <section class="animate section-intro">
       <h2 class="font-semibold text-black-white">
-        Let's Connect
+        Contact
       </h2>
-      <article>
-        <p>
-          If you want to get in touch with me about something or just to say hi,
-          reach out on social media or send me an email.
-        </p>
-      </article>
       <ul class="social-list">
         {{ range .Site.Params.socials }}
           <li class="social-item">
