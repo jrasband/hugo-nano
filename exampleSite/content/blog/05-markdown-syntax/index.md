@@ -2,6 +2,7 @@
 title: "Markdown syntax guide"
 description: "Get started writing content in markdown."
 date: "2024-03-17"
+math: true
 ---
 
 ---
@@ -381,6 +382,32 @@ Denote a code block by enclosing a section of valid code in triple backticks. Sy
     console.log("hello world");
   }
 ```
+
+---
+
+### Math Equations (LaTeX/KaTeX)
+
+You can write mathematical equations using LaTeX notation. 
+
+#### Inline Math
+
+To render math inline, enclose the formula in single dollar signs `$`. For example, `$E = mc^2$` renders as: $E = mc^2$.
+
+#### Block Math
+
+To render math as a centered block, enclose the formula in double dollar signs `$$`.
+
+For example:
+```md
+$$
+f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i x \xi} d\xi
+$$
+```
+renders as:
+
+$$
+f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i x \xi} d\xi
+$$
 
 ---
 
